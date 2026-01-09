@@ -2,7 +2,8 @@ import { getPosts } from '@/lib/api';
 import PostCard from '@/components/PostCard';
 import SearchBar from '@/components/SearchBar';
 import FilterPanel from '@/components/FilterPanel';
-import { Post } from '@/lib/types';
+import { Post } from '@/lib/api';
+import FilterSection from '@/components/FilterSection';
 
 export default async function Home() {
   // Получаем посты на сервере (SSR)
@@ -22,12 +23,7 @@ export default async function Home() {
         </div>
 
         {/* Компонент для поиска (клиентский) */}
-        <div className="mb-8">
-          <SearchBar value="" onChange={() => {}} />
-        </div>
-
-        {/* Фильтры (клиентский компонент) */}
-        <FilterPanel onFilterChange={() => {}} />
+        <FilterSection />
 
         {/* Сетка постов */}
         <div className="mb-8">
