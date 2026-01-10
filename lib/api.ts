@@ -1,5 +1,3 @@
-import { Post } from './types';
-
 const API_URL = 'https://jsonplaceholder.typicode.com';
 
 export interface Post {
